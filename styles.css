@@ -1,0 +1,29 @@
+ main {
+     width: 1000px;
+     margin: auto;
+ }
+ 
+ header {
+     text-align: center;
+     font-size: large;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+ 
+ #nagykep {
+     display: flex;
+ }
+ 
+ #nagykep img {
+     width: 100%;
+ }
+ 
+ #kep {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+ 
+ #kep img {
+     width: 100%;
+ }
