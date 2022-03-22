@@ -18,8 +18,7 @@ header {
 #nagykep {
     display: flex;
     margin-bottom: 30px;
-    border: 1px solid black;
-    border-radius: 25px;
+    justify-content: center;
 }
 
 #nagykep img {
@@ -42,14 +41,41 @@ header {
     border-radius: 25px;
 }
 
-#balra {
-    margin-right: 50px;
-}
-
-#jobbra {
-    margin-left: 0px;
-}
-
 footer {
     text-align: center;
+}
+
+#leirasok {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+}
+
+#fokep {
+    padding-left: 30px;
+}
+
+#cim {
+    text-align: center;
+}
+
+#leiras {
+    text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+    main {
+        width: 700px;
+    }
+    #kep {
+        grid-template-columns: 1fr 1fr;
+        width: 50%;
+    }
+    #nagykep {
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+    }
 }
