@@ -1,18 +1,23 @@
 var kepektomb = [{
     kepEleresiut: "kepek/kepek/kep1.jpg",
-    kepCim: "Első kép címe"
+    kepCim: "Első kép címe",
+    kepLeiras: "Kecskék"
 }, {
     kepEleresiut: "kepek/kepek/kep2.jpg",
-    kepCim: "Második kép címe"
+    kepCim: "Második kép címe",
+    kepLeiras: "Virágos fák"
 }, {
     kepEleresiut: "kepek/kepek/kep3.jpg",
-    kepCim: "Harmadik kép címe"
+    kepCim: "Harmadik kép címe",
+    kepLeiras: "Rét virágokkal"
 }, {
     kepEleresiut: "kepek/kepek/kep4.jpg",
-    kepCim: "Negyedik kép címe"
+    kepCim: "Negyedik kép címe",
+    kepLeiras: "Síkság"
 }, {
     kepEleresiut: "kepek/kepek/kep5.jpg",
-    kepCim: "Ötödik kép címe"
+    kepCim: "Ötödik kép címe",
+    kepLeiras: "Útmente"
 }];
 
 function ID(elem) {
@@ -27,7 +32,8 @@ function init() {
     }
     console.log(txt);
     ID("kep").innerHTML = txt;
-
+    ID("cim").innerHTML = "<h1> Első kép címe</h1>";
+    ID("leiras").innerHTML = "<p> Kecskék</p>";
 
     ID("balra").addEventListener("click", balra);
     ID("jobbra").addEventListener("click", jobbra);
@@ -40,6 +46,8 @@ function balra() {
         aktKep = kepektomb.length - 1;
     }
     megjelenit(aktKep);
+    ID("cim").innerHTML = "<h1> " + kepektomb[aktKep].kepCim + "</h1>";
+    ID("leiras").innerHTML = "<p> " + kepektomb[aktKep].kepLeiras + "</p>";
 }
 
 function jobbra() {
@@ -48,8 +56,16 @@ function jobbra() {
         aktKep = 0;
     }
     megjelenit(aktKep);
+    ID("cim").innerHTML = "<h1> " + kepektomb[aktKep].kepCim + "</h1>";
+    ID("leiras").innerHTML = "<p> " + kepektomb[aktKep].kepLeiras + "</p>";
 }
 
+
+function kepbetoltes() {
+    console.log("Kattintottunk");
+    var rnd = Math.floor(Math.random() * kepektomb.length);
+    megjelenit(rnd);
+}
 
 function megjelenit(index) {
     ID("fokep").src = kepektomb[index].kepEleresiut;
